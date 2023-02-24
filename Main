@@ -1,0 +1,138 @@
+Main:
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Main {
+    public static void main(String[] args) {
+        PatientDatabase database = new PatientDatabase();
+
+        // Add new patients
+        database.addPatient(new Patient("Tobis", "dog", "Brivibas 55", "2776654"));
+        database.addPatient(new Patient("Mince", "Eksporta 4", "cat", "2889908"));
+
+        // Search for a patient
+        Patient patient = database.searchPatientByName("Tobis");
+        if (patient != null) {
+            System.out.println("Found patient: " + patient.getName());
+        } else {
+            System.out.println("Patient not found.");
+        }
+        //Panel and frame
+        JFrame frame = new JFrame("Vet register");
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        frame.setSize(600, 400);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+
+
+        JLabel NameOutput = new JLabel("Patient name");
+        NameOutput.setBounds(30, 10, 100, 10);
+        panel.add(NameOutput);
+    }}
+        panel.setVisible(true);
+
+Patient pakete:
+public class Patient {
+    private String name;
+    private String animal;
+    private String address;
+    private String contactNumber;
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean getId() {
+        return getId();
+    }
+
+    public String getAnimal() {
+        return animal;
+    }
+
+    public String getAge() {
+        return getAge();
+    }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    //Constructor
+    public Patient(String name, String animal, String address, String contactNumber) {
+        this.name = name;
+        this.animal = animal;
+        this.address = address;
+        this.contactNumber = contactNumber;
+    }
+}
+Patient database pakete:
+
+public class Patient {
+    private String name;
+    private String animal;
+    private String address;
+    private String contactNumber;
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean getId() {
+        return getId();
+    }
+
+    public String getAnimal() {
+        return animal;
+    }
+
+    public String getAge() {
+        return getAge();
+    }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    //Constructor
+    public Patient(String name, String animal, String address, String contactNumber) {
+        this.name = name;
+        this.animal = animal;
+        this.address = address;
+        this.contactNumber = contactNumber;
+    }
+}
